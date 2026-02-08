@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Mistuuu ❤️</title>
+
+<style>
+
+body{
+ text-align:center;
+ font-family:sans-serif;
+ background:#ffd6e7;
+ margin:0;
+ padding:20px;
+ overflow:hidden;
+}
+
+/* image */
+.proposal-img{
+ width:300px;
+ border-radius:15px;
+ margin-top:20px;
+}
+
+/* buttons */
+button{
+ padding:12px 25px;
+ font-size:16px;
+ border:none;
+ border-radius:25px;
+ margin:10px;
+ cursor:pointer;
+}
+
+#yes{ background:#ff4da6; color:white; }
+#no{ background:#888; color:white; }
+
+/* message */
+#loveMsg{
+ display:none;
+ margin-top:20px;
+ font-size:18px;
+ color:#d63384;
+ font-weight:bold;
+}
+
+#noMsg{
+ display:none;
+ margin-top:20px;
+ font-size:18px;
+ color:#6a1b9a;
+ font-weight:bold;
+}
+
+/* flowers */
+.flower{
+ position:absolute;
+ font-size:24px;
+ animation:fall linear infinite;
+}
+
+@keyframes fall{
+ from{transform:translateY(-10vh)}
+ to{transform:translateY(110vh)}
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Will you be my Valentine Mistuu? ❤️</h1>
+
+<img src="proposal.jpg" class="proposal-img">
+
+<br>
+
+<button id="yes" onclick="showLove()">Yes ❤️</button>
+<button id="no" onclick="showNo()">No 😢</button>
+
+<div id="loveMsg">
+I love youuu foreverr ❤️ <br>
+Thank youu for being my heart… <br>
+You are and you will be my only and only forever Valentine ♥️ <br><br>
+You make my world brighter just by being in it… my cutest love 💞
+</div>
+
+<div id="noMsg">
+Are you sure my baby girl you don’t want that you deserve 😉
+</div>
+
+<script>
+
+/* YES clicked */
+function showLove(){
+ document.getElementById("loveMsg").style.display="block";
+ flowerShower();
+}
+
+/* NO clicked */
+function showNo(){
+ document.getElementById("noMsg").style.display="block";
+}
+
+/* flower shower */
+function flowerShower(){
+ for(let i=0;i<40;i++){
+  let flower=document.createElement("div");
+  flower.className="flower";
+  flower.innerHTML="🌸";
+  flower.style.left=Math.random()*100+"vw";
+  flower.style.animationDuration=(Math.random()*3+3)+"s";
+  document.body.appendChild(flower);
+ }
+}
+
+</script>
+
+</body>
+</html>
