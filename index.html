@@ -12,8 +12,20 @@
 
 <h2>Will you be my Valentine forever?</h2>
 
-<button>Yes</button>
+<button onclick="showLove()">Yes</button>
 <button>No</button>
+
+<h3 id="loveMsg" style="display:none; color:#d63384; margin-top:20px;">
+I love youuu foreverr ❤️  
+Thank youu for being my heart.  
+You are and you will be my only and only forever Valentine ♥️
+</h3>
+
+<script>
+function showLove(){
+ document.getElementById("loveMsg").style.display="block";
+}
+</script>
 
 </body>
 </html>
